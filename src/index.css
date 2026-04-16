@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand: #2563EB;
+  --color-bg-app: #F8FAFC;
+  --color-bg-content: #F1F5F9;
+  --color-ink: #1E293B;
+  --color-ink-muted: #64748B;
+  --color-line: #E2E8F0;
+  
+  --color-background: #FFFFFF;
+  --color-foreground: #1E293B;
+  
+  --color-primary: #2563EB;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-border: #E2E8F0;
+  --radius-lg: 12px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-app text-ink font-sans antialiased;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(37, 99, 235, 0.05) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .drop-zone-active {
+    @apply border-brand bg-blue-50/50;
+  }
+}
